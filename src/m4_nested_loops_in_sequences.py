@@ -128,6 +128,10 @@ def multiply_numbers(sequence_of_lists):
     #             to loop through it in the INNER loop.
     #        -- See   m2e_nested_loops_in_sequences   as needed.
     # ------------------------------------------------------------------
+    for j in range(len(sequence_of_lists)):
+        sublist = sequence_of_lists[j]
+        for k in range(len(sublist)):
+            sublist[k] = (j+1)*sublist[k]
 
 
 def run_test_sum_numbers():
@@ -169,6 +173,15 @@ def sum_numbers(seq_seq):
     # TODO: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
+    total = 0
+    for j in range(len(seq_seq)):
+        sublist = seq_seq[j]
+        for k in range(len(sublist)):
+            total = total + sublist[k]
+
+    return total
+
+
 
 
 def run_test_print_characters():
@@ -221,6 +234,12 @@ def print_characters(sequence_of_strings):
     #  ** READ THE TESTS that have been written for you (ABOVE).
     #  ** ASK QUESTIONS if you do not understand the TESTS (ABOVE).
     # ------------------------------------------------------------------
+    for k in range(len(sequence_of_strings)):
+        sublist = sequence_of_strings[k]
+        for j in range(len(sublist)):
+            print(sublist[j])
+
+
 
 
 def run_test_print_characters_slanted():
@@ -277,6 +296,11 @@ def print_characters_slanted(sequence_of_strings):
     # ** HINT: ** Consider using string multiplication for the spaces
     #             and string addition to stitch the spaces to the character.
     # ------------------------------------------------------------------
+    for j in range(len(sequence_of_strings)):
+        sublist = sequence_of_strings[j]
+        for k in range(len(sublist)):
+            print(' '*k,sublist[k])
+
 
 
 # ----------------------------------------------------------------------
