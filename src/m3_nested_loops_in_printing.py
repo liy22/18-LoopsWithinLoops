@@ -61,7 +61,10 @@ def rectangle_of_stars(r, c):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for j in range(r):
+        for k in range(c):
+            print('*',end='')
+        print()
 
 def run_test_triangle_of_stars():
     """ Tests the    triangle_of_stars    function. """
@@ -116,6 +119,10 @@ def triangle_of_stars(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for j in range(r):
+        for k in range(j+1):
+            print('*',end='')
+        print()
 
 
 def run_test_decreasing_exclamation_marks():
@@ -159,6 +166,11 @@ def decreasing_exclamation_marks(m, n):
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
 
+    for j in range(m,n-1,-1):
+        for k in range(j):
+            print('!',end='')
+        print()
+
 
 def run_test_alternating_brackets():
     """ Tests the    alternating_brackets    function. """
@@ -200,7 +212,13 @@ def alternating_brackets(m, n):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for j in range(m,n-1,-1):
+        for k in range(j):
+            if k%2 == 0:
+                print('[',end='')
+            else:
+                print(']',end='')
+        print()
 
 def run_test_triangle_same_number_in_each_row():
     """ Tests the    triangle_same_number_in_each_row    function. """
@@ -243,6 +261,10 @@ def triangle_same_number_in_each_row(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for j in range(r):
+        for k in range(j+1):
+            print(str(j+1),end='')
+        print()
 
 
 def run_test_triangle_all_numbers_in_each_row():
@@ -286,6 +308,10 @@ def triangle_all_numbers_in_each_row(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for j in range(r):
+        for k in range(j+1):
+            print(str(k+1),end='')
+        print()
 
 
 # ----------------------------------------------------------------------
