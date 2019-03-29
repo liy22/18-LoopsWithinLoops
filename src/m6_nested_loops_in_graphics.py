@@ -96,11 +96,13 @@ def draw_L(window, circle, r, c):
                 new_circle = rg.Circle(center, radius)
                 new_circle.attach_to(window)
                 window.render()
+                new_circle.fill_color = circle.fill_color
         else:
             for j in range(c + 3):
                 center.x = center.x + 2 * radius
                 new_circle = rg.Circle(center, radius)
                 new_circle.attach_to(window)
+                new_circle.fill_color = circle.fill_color
                 window.render()
         center.x = circle.center.x
         center.y = center.y + 2 * radius
